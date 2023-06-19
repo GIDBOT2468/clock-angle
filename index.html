@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock Angle</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <main>
+            <h1>Clock Angle Calculator</h1>
+            <div id="clock">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                    <image href="clock.jpg" height="200" width="200" />
+                    <g transform="translate(100, 100)">
+                        <!-- hour hand -->
+                        <line x1="0" y1="0" x2="0" y2="-40" stroke="#4a4a4a" stroke-width="4" stroke-linecap="round" id="hoursHand"/>
+                        <!-- minute hand -->
+                        <line x1="0" y1="0" x2="0" y2="-70" stroke="#5b5c5a" stroke-width="3" stroke-linecap="round" id="minutesHand"/>
+                    </g>
+                </svg>
+            </div>
+            <label for="hours">Hours</label>
+            <input type="number" name="hoursInput" id="hoursInput" min="0" max="12" step="1" value="0" onchange="moveHands()">
+            <br><br>
+            <label for="minutes">Minutes</label>
+            <input type="number" name="minutesInput" id="minutesInput" min="0" max="60" step="1" value="0" onchange="moveHands()">
+            <h2 id="answerText">Angle between hands: 0°</h2>
+        </main>
+    </body>
+</html>
